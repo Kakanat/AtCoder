@@ -1,25 +1,31 @@
 #include <iostream>
 using namespace std;
 
-int main(void) {
+const long long MAX = 1e18;
+
+int main(){
     int N;
-    int64_t A[110000];
-    int64_t ans = 1;
+    long long A[100010];
+    long long ans = 1;
     cin >> N;
     for (int i = 0; i < N; ++i) {
         cin >> A[i];
-    }
-    
-    for (int i = 0; i < N; ++i) {
-        ans *= A[i];
-    }
-    
-    if (ans >= 0 && ans <= 1000000000000000000) {
-        cout << ans << endl;
-    }
-    else {
-        cout << '-1' << endl;
+        if (A[i] == 0) {
+            cout << 0 << endl;
+            return 0;
+        }
     }
 
+    for (int i = 0; i < N; ++i) {
+        if (A[i] > MAX / ans) {
+            cout  << -1 << endl;
+            return 0;
+        }
+        else {
+            ans *= A[i];
+        }
+    }
+
+    cout << ans << endl;
     return 0;
 }
