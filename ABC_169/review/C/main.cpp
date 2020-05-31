@@ -1,14 +1,13 @@
 #include <iostream>
-// #include <bits/stdc++.h>
 using namespace std;
 
-int main(void) {
-    int64_t A;
+int main() {
+    long long A;
     double B;
     cin >> A >> B;
 
-    int64_t ans = (int64_t)A * B;
+    long long ans = (A * (long long)(B * 100 + 0.5)) / 100;
     cout << ans << endl;
 
-    // return 0;
+    return 0;
 }
