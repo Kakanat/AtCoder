@@ -1,17 +1,37 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
+
 int main() {
-    int64_t N;
+    long long N;
     cin >> N;
-    int64_t temp = N;
-    int count = 0;
-    for (int64_t i = 2; i <= N; i++) {
-        if (temp % i == 0) {
-            count += 1;
-            temp = temp / i;
+
+    vector<pair<long long, int>> fs;
+    for (long long i = 2; i * i <= N; ++i) {
+        int x = 0;
+        while (N % i == 0) {
+            N /= i;
+            ++x;
+        }
+        fs.emplace_back(i, x);
+    }
+    if (N != 1) {
+        fs.emplace_back(N, 1);
+    }
+
+    int ans = 0;
+    for (auto p : fs) {
+        int x = p.second;
+        int b = 1;
+        while (b <= x) {
+            x -= b;
+            ++b;
+            ++ans;
         }
     }
-    cout << count << endl;
+
+    cout << ans << endl;
+
     return 0;
 }
