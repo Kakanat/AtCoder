@@ -1,0 +1,7 @@
+各問題まとめ：
+    A: switch文を使うとスマート。
+    B: 特になし。
+    C: coutでは、fixedとsetprecisionで固定小数点表記の表示を操る。
+    D: 
+    E: 
+    F: 
