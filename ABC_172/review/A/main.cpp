@@ -10,5 +10,9 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int a;
+  cin >> a;
+  int ans = a*a*a + a*a + a;
+  cout << ans << endl;
   return 0;
 }

@@ -10,5 +10,10 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  string s, t;
+  cin >> s >> t;
+  int ans = 0;
+  rep(i,s.size()) ans += s[i]!=t[i];
+  cout << ans << endl;
   return 0;
 }
