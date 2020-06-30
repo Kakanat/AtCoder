@@ -1,7 +1,7 @@
 各問題まとめ：
     A: 特になし。
     B: 特になし。
-    C: 特になし。
+    C: coutでは、fixedとsetprecisionで固定小数点表記の表示を操る。ABC168のC問題で既出。
     D: 
     E: 
     F: 
