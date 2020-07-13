@@ -11,5 +11,15 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  ll A, B, K;
+  cin >> A >> B >> K;
+  ll res = K - A;
+  if (res >= 0) {
+    A = 0;
+    if (res >= B) B = 0;
+    else B -= res;
+  }
+  else A -= K;
+  cout << A << ' ' << B << endl;
   return 0;
 }
