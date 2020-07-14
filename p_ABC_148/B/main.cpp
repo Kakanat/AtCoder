@@ -11,5 +11,11 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N;
+  cin >> N;
+  string S, T;
+  cin >> S >> T;
+  rep(i,N) cout << S[i] << T[i];
+  cout << endl;
   return 0;
 }

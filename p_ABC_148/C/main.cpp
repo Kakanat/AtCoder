@@ -10,6 +10,15 @@ using namespace std;
 using ll = long long;
 using P = pair<int,int>;
 
+int gcd(int x, int y) {
+  if (x%y == 0) return y;
+  return gcd(y, x%y);
+}
+
 int main() {
+  ll A, B;
+  cin >> A >> B;
+  ll lcm = A * B / gcd(A,B);
+  cout << lcm << endl;
   return 0;
 }
