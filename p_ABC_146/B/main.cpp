@@ -11,5 +11,14 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N; 
+  string S;
+  cin >> N >> S;
+  for (auto i : S) {
+    int t = int(i) + N;
+    if (t > 90) t -= 26;
+    cout << char(t);
+  }
+  cout << endl;
   return 0;
 }

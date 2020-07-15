@@ -11,5 +11,21 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N;
+  string S;
+  cin >> N >> S;
+  if (N%2 == 1) {
+    cout << "No" << endl;
+    return 0;
+  }
+  else {
+    rep(i,N/2) {
+      if (S[i] != S[N/2+i]) {
+        cout << "No" << endl;
+        return 0;
+      }
+    }
+  }
+  cout << "Yes" << endl;
   return 0;
 }
