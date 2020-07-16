@@ -11,5 +11,14 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N, K;
+  cin >> N >> K;
+  vector<int> h(N);
+  rep(i,N) cin >> h[i];
+  int ans = 0;
+  rep(i,N) {
+    if (h[i] >= K) ++ans;
+  }
+  cout << ans << endl;
   return 0;
 }
