@@ -11,5 +11,18 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int a, b;
+  cin >> a >> b;
+  if (b == 1) {
+    cout << 0 << endl;
+    return 0;
+  }
+  int hole = a;
+  int tap = 1;
+  while (hole < b) {
+    hole += a-1;
+    ++tap;
+  }
+  cout << tap << endl;
   return 0;
 }
