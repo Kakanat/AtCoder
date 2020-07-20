@@ -11,5 +11,19 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N, K, Q;
+  cin >> N >> K >> Q;
+  vector<int> score(N);
+  rep(i,N) score[i] = K - Q;
+  rep(i,Q) {
+    int a;
+    cin >> a;
+    --a;
+    ++score[a];
+  }
+  rep(i,N) {
+    if (score[i] > 0) cout << "Yes" << endl;
+    else cout << "No" << endl;
+  }
   return 0;
 }
