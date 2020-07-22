@@ -11,5 +11,10 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N, D;
+  cin >> N >> D;
+  int den = 2 * D + 1;
+  int ans = (N + den - 1) / den;
+  cout << ans << endl;
   return 0;
 }
