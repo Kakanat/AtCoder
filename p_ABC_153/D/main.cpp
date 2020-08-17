@@ -11,5 +11,20 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  ll H; cin >> H;
+  ll ans = 0;
+  ll num_monster = 1;
+  while (H > 0) {
+    if (H == 1) {
+      ans += num_monster;
+      H = 0;
+    }
+    else {
+      ans += num_monster;
+      H /= 2;
+      num_monster *= 2;
+    }
+  }
+  cout << ans << endl;
   return 0;
 }
