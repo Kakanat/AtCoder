@@ -12,5 +12,16 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
+  int N; cin >> N;
+  ll ans = 0;
+  ll temp = 0;
+  rep(i,N) {
+    ll person; cin >> person;
+    if (person < temp) {
+      ans += temp - person;
+    }
+    else temp = person;
+  } 
+  cout << ans << endl; 
   return 0;
 }
