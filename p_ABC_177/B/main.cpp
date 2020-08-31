@@ -12,13 +12,15 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-  string N; cin >> N;
-  int t = 0;
-  rep(i,N.size()) {
-    t += (int)(N[i] - '0');
-    t %= 9;
+  string S, T; cin >> S >> T;
+  int ans = 2000;
+  rep(i, S.size() - T.size() + 1) {
+    int temp = 0;
+    rep(j, T.size()) {
+      if (S[i+j] != T[j]) temp++;
+    }
+    ans = min(ans, temp);
   }
-  if (t%9==0) cout << "Yes" << endl;
-  else cout << "No" << endl;
+  cout << ans << endl;
   return 0;
 }
